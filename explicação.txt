@@ -1,0 +1,18 @@
+
+VALIDAR ACESSO:
+
+- 1. Saber que tem um usuário logado?
+- 2. Se tiver, VALIDAR o usuário.
+- 3. Se sim, liberar o acesso!
+
+LOGAR:
+
+- 1. Receber dados de login
+- 2. Enviar uma requisição para o BackEnd validar estes dados no banco de dados.
+- 3. O BackEnd retornando correto, salva-se alguma referencia ao usuário no browser.
+- 4. Se estiver errado, avisa para o usuário que está errado.
+
+DESLOGAR: 
+- 1. Apago a referencia que existir no browser.
+(--- 1.1 Dependendo como funcina a ponta com o BackEnd, enviar uma requisição para destruir aquela referencia.)
+- 2. Apago a página.
