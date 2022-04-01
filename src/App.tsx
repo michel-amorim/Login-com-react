@@ -1,8 +1,12 @@
 import { useContext } from "react";
-import "./App.css";
 import { Route, Routes, Link } from "react-router-dom";
+
+import "./App.css";
+import logo from "./assets/img/logo.svg";
+
 import { Home } from "./pages/Home";
 import { Private } from "./pages/Private";
+
 import { RequireAuth } from "./contexts/Auth/RequireAuth";
 import { AuthContext } from "./contexts/Auth/AuthContext";
 
@@ -17,11 +21,20 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Header do site</h1>
+        <Link to="/">
+          <img src={logo} alt="INSURE" />
+        </Link>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/private">Página Privada</Link>
-          {auth.user && <button onClick={handleLogout}>Sair</button>}
+          <ul>
+            <li>
+              <Link to="/">home</Link>
+            </li>
+            <li>
+              <Link to="/private">private</Link>
+            </li>
+
+            {auth.user && <button onClick={handleLogout}>Sair</button>}
+          </ul>
         </nav>
       </header>
       <hr />

@@ -1,3 +1,5 @@
+import "../Home/style.css";
+
 export const Home = () => {
-  return <div>Home</div>;
+  return <div className="home">Home</div>;
 };
