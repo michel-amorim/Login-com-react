@@ -13,12 +13,10 @@ export const useApi = () => ({
   signin: async (email: string, password: string) => {
     return {
       user: { id: 3, name: "José", email: "jose@gmail.com" },
-      token: "12456789",
+      token: "123456789",
     };
   },
   logout: async () => {
-    return {
-      status: true,
-    };
+    return { status: true };
   },
 });

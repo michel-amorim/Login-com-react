@@ -9,9 +9,9 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
 
   useEffect(() => {
     const validateToken = async () => {
-      const storegeData = localStorage.getItem("authToken");
-      if (storegeData) {
-        const data = await api.validateToken(storegeData);
+      const storageData = localStorage.getItem("authToken");
+      if (storageData) {
+        const data = await api.validateToken(storageData);
         if (data.user) {
           setUser(data.user);
         }
@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
   };
 
   const signout = async () => {
-    console.log("ESTA SENDO EXECUTADA");
+    console.log("signout está sendo executada.");
     setUser(null);
     setToken("");
     await api.logout();
